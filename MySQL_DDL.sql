@@ -50,8 +50,9 @@ CREATE TABLE IF NOT EXISTS student (
 -- 선생님(감독자) 테이블
 CREATE TABLE IF NOT EXISTS teacher (
 	id 		VARCHAR(16) 	NOT NULL,
-    pw 		VARCHAR(80) 	NOT NULL,
+    pw 		CHAR(128) 	NOT NULL,
     name 	VARCHAR(12) 	NOT NULL,
+    token	VARCHAR(200),
     
     PRIMARY KEY (id)
 );
