@@ -122,7 +122,7 @@ CREATE TABLE IF NOT EXISTS prior_absence (
 -- 어드민 테이블
 CREATE TABLE IF NOT EXISTS admin (
 	id VARCHAR(16) NOT NULL,
-    pw VARCHAR(128) NOT NULL,
+    pw VARCHAR(80) NOT NULL,
     
     PRIMARY KEY (id)
 )
