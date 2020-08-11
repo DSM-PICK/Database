@@ -12,7 +12,7 @@ DROP TABLE IF EXISTS teacher;
 DROP TABLE IF EXISTS activity;
 DROP TABLE IF EXISTS changed_teacher;
 DROP TABLE IF EXISTS prior_absence;
-DROP TABLE IF EXISTS bug;
+DROP TABLE IF EXISTS admin;
 
 
 -- MAIN TABLE CONFIGURATION
@@ -119,13 +119,10 @@ CREATE TABLE IF NOT EXISTS prior_absence (
     PRIMARY KEY (id)
 );
 
--- 버그 제보 테이블
-CREATE TABLE IF NOT EXISTS bug (
-	id 			INT(11) 	NOT NULL 	AUTO_INCREMENT,
-	teacher_id 	VARCHAR(16) NOT NULL,
-    content 	VARCHAR(80) NOT NULL,
-    
-    FOREIGN KEY (teacher_id)	REFERENCES teacher(id)	ON UPDATE CASCADE,
+-- 어드민 테이블
+CREATE TABLE IF NOT EXISTS admin (
+	id VARCHAR(16) NOT NULL,
+    pw VARCHAR(128) NOT NULL,
     
     PRIMARY KEY (id)
-);
+)
