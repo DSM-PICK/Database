@@ -61,13 +61,13 @@ CREATE TABLE IF NOT EXISTS teacher (
 CREATE TABLE IF NOT EXISTS activity (
 	date 					DATE 			NOT NULL,
     schedule 				VARCHAR(28) 	NOT NULL,
-    two_floor_teacher_id 	VARCHAR(16) 	NOT NULL,
-    three_floor_teacher_id 	VARCHAR(16) 	NOT NULL,
-    four_floor_teacher_id 	VARCHAR(16) 	NOT NULL,
+    second_floor_teacher_id 	VARCHAR(16) 	NULL,
+    third_floor_teacher_id 	VARCHAR(16) 	NULL,
+    forth_floor_teacher_id 	VARCHAR(16) 	NULL,
     
-    FOREIGN KEY (two_floor_teacher_id) 		REFERENCES teacher(id) ON UPDATE CASCADE,
-    FOREIGN KEY (three_floor_teacher_id) 	REFERENCES teacher(id) ON UPDATE CASCADE,
-    FOREIGN KEY (four_floor_teacher_id) 	REFERENCES teacher(id) ON UPDATE CASCADE,
+    FOREIGN KEY (second_floor_teacher_id) 		REFERENCES teacher(id) ON UPDATE CASCADE,
+    FOREIGN KEY (third_floor_teacher_id) 	REFERENCES teacher(id) ON UPDATE CASCADE,
+    FOREIGN KEY (forth_floor_teacher_id) 	REFERENCES teacher(id) ON UPDATE CASCADE,
     
     PRIMARY KEY (date)
 );
