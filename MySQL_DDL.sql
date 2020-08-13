@@ -74,24 +74,18 @@ CREATE TABLE IF NOT EXISTS activity (
 
 -- 출석 테이블 ( 메인 기능 , activity + teacher + student )
 CREATE TABLE IF NOT EXISTS attendence (
+	id				INT(11)			NOT NULL		AUTO_INCREMENT,
     date 			DATE 			NOT NULL,
-	teacher_id 		VARCHAR(16) 	NOT NULL,
     student_num 	CHAR(4) 		NOT NULL,
     period 			INT(11) 		NOT NULL,
     
+	teacher_id 		VARCHAR(16) 	NOT NULL,
     state 			CHAR(4) 		NOT NULL,
-    content 		VARCHAR(40),
     
     FOREIGN KEY (date) 			REFERENCES activity(date) 	ON UPDATE CASCADE,
-    FOREIGN KEY (teacher_id) 	REFERENCES teacher(id) 		ON UPDATE CASCADE,
     FOREIGN KEY (student_num) 	REFERENCES student(num) 	ON UPDATE CASCADE,
     
-    PRIMARY KEY (
-		date,
-        teacher_id,
-        student_num,
-        period
-	)
+    PRIMARY KEY (id)
 );
 
 -- 변경된 선생님 목록 테이블 ( 임시 테이블 )
