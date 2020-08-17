@@ -94,7 +94,9 @@ CREATE TABLE IF NOT EXISTS changed_teacher (
     date 	DATE 		NOT NULL,
     
     FOREIGN KEY (id) 	REFERENCES teacher(id) 		ON UPDATE CASCADE,
-    FOREIGN KEY (date) 	REFERENCES activity(date) 	ON UPDATE CASCADE
+    FOREIGN KEY (date) 	REFERENCES activity(date) 	ON UPDATE CASCADE,
+    
+    PRIMARY KEY(id, date)
 );
 
 -- 사전 결석 테이블 ( activity{2} + student + teacher)
@@ -107,8 +109,6 @@ CREATE TABLE IF NOT EXISTS prior_absence (
     start_period 	INT(11) 	NOT NULL,
     end_period 		INT(11) 	NOT NULL,
     
-    FOREIGN KEY (start_date) 	REFERENCES activity(date) 	ON UPDATE CASCADE,
-    FOREIGN KEY (end_date) 		REFERENCES activity(date) 	ON UPDATE CASCADE,
     FOREIGN KEY (student_num) 	REFERENCES student(num) 	ON UPDATE CASCADE,
     FOREIGN KEY (teacher_sign)	REFERENCES teacher(id)		ON UPDATE CASCADE,
     
