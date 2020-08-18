@@ -20,8 +20,8 @@ DROP TABLE IF EXISTS admin;
 CREATE TABLE IF NOT EXISTS club (
     name 		VARCHAR(20) 	NOT NULL,
     floor 		INT(1) 			NOT NULL,
-    location 	VARCHAR(20) 	NOT NULL,
-    priority 	INT(11) 		NOT NULL,
+    location 	VARCHAR(20) 	NOT NULL	UNIQUE,
+    priority INT(11) NOT NULL,
 
     PRIMARY KEY (name)
 );
@@ -102,7 +102,7 @@ CREATE TABLE IF NOT EXISTS changed_teacher (
 -- 사전 결석 테이블 ( activity{2} + student + teacher)
 CREATE TABLE IF NOT EXISTS prior_absence (
 	id 				INT(11) 	NOT NULL AUTO_INCREMENT,
-    teacher_sign	VARCHAR(16) NOT NULL,
+    teacher_id		VARCHAR(16) NOT NULL,
 	start_date 		DATE 		NOT NULL,
     end_date 		DATE 		NOT NULL,
     student_num 	CHAR(4) 	NOT NULL,
