@@ -110,7 +110,7 @@ CREATE TABLE IF NOT EXISTS prior_absence (
     end_period 		INT(11) 	NOT NULL,
     
     FOREIGN KEY (student_num) 	REFERENCES student(num) 	ON UPDATE CASCADE,
-    FOREIGN KEY (teacher_sign)	REFERENCES teacher(id)		ON UPDATE CASCADE,
+    FOREIGN KEY (teacher_id)	REFERENCES teacher(id)		ON UPDATE CASCADE,
     
     PRIMARY KEY (id)
 );
