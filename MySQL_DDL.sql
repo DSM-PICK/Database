@@ -19,11 +19,18 @@ DROP TABLE IF EXISTS admin;
 -- 동아리 테이블
 CREATE TABLE IF NOT EXISTS club (
     name 		VARCHAR(20) 	NOT NULL,
-    floor 		INT(1) 			NOT NULL,
     location 	VARCHAR(20) 	NOT NULL	UNIQUE,
-    priority INT(11) NOT NULL,
 
-    PRIMARY KEY (name)
+    PRIMARY KEY (name),
+    FOREIGN KEY(location) REFERENCES club_location(location) ON UPDATE CASCADE ON DELETE SET NULL
+);
+
+CREATE TABLE IF NOT EXISTS club_location (
+	location VARCHAR(20) NOT NULL,
+    floor INT NOT NULL,
+    priority INT NOT NULL,
+    
+    PRIMARY KEY(location)
 );
 
 -- 교실 테이블
