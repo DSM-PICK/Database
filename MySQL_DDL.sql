@@ -39,6 +39,7 @@ CREATE TABLE IF NOT EXISTS club (
 CREATE TABLE IF NOT EXISTS class (
 	name 		VARCHAR(20) 	NOT NULL,
     floor 		INT(1) 			NOT NULL,
+    priority	INT 			NOT NULL,
 
     PRIMARY KEY (name)
 );
