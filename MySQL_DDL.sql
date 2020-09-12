@@ -16,6 +16,14 @@ DROP TABLE IF EXISTS prior_absence;
 DROP TABLE IF EXISTS admin;
 
 
+CREATE TABLE IF NOT EXISTS club_location (
+	location VARCHAR(20) NOT NULL,
+    floor INT NOT NULL,
+    priority INT NOT NULL,
+    
+    PRIMARY KEY(location)
+);
+
 -- MAIN TABLE CONFIGURATION
 -- 동아리 테이블
 CREATE TABLE IF NOT EXISTS club (
@@ -24,15 +32,7 @@ CREATE TABLE IF NOT EXISTS club (
     teacher VARCHAR(10) NOT NULL,
 
     PRIMARY KEY (name),
-    FOREIGN KEY(location) REFERENCES club_location(location) ON UPDATE CASCADE ON DELETE SET NULL
-);
-
-CREATE TABLE IF NOT EXISTS club_location (
-	location VARCHAR(20) NOT NULL,
-    floor INT NOT NULL,
-    priority INT NOT NULL,
-    
-    PRIMARY KEY(location)
+    FOREIGN KEY(location) REFERENCES club_location(location) ON UPDATE CASCADE ON DELETE NO ACTION
 );
 
 -- 교실 테이블
