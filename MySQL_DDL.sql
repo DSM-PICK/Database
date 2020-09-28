@@ -30,6 +30,7 @@ CREATE TABLE IF NOT EXISTS club (
     name 		VARCHAR(20) 	NOT NULL,
     location 	VARCHAR(20) 	NOT NULL	UNIQUE,
     teacher VARCHAR(10) NOT NULL,
+    club_head VARCHAR(12) NOT NULL,
 
     PRIMARY KEY (name),
     FOREIGN KEY(location) REFERENCES club_location(location) ON UPDATE CASCADE ON DELETE NO ACTION
