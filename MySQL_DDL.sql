@@ -40,6 +40,7 @@ CREATE TABLE IF NOT EXISTS club (
 CREATE TABLE IF NOT EXISTS class (
 	name 		VARCHAR(20) 	NOT NULL,
     floor 		INT(1) 			NOT NULL,
+    priority	INT 			NOT NULL,
 
     PRIMARY KEY (name)
 );
@@ -75,7 +76,7 @@ CREATE TABLE IF NOT EXISTS activity (
     third_floor_teacher_id 	VARCHAR(16) 	NULL,
     forth_floor_teacher_id 	VARCHAR(16) 	NULL,
     
-    FOREIGN KEY (second_floor_teacher_id) 		REFERENCES teacher(id) ON UPDATE CASCADE,
+    FOREIGN KEY (second_floor_teacher_id) 	REFERENCES teacher(id) ON UPDATE CASCADE,
     FOREIGN KEY (third_floor_teacher_id) 	REFERENCES teacher(id) ON UPDATE CASCADE,
     FOREIGN KEY (forth_floor_teacher_id) 	REFERENCES teacher(id) ON UPDATE CASCADE,
     
