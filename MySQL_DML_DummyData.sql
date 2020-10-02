@@ -60,8 +60,8 @@ INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('202
 INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-02', '2417', '9', 'aaa', '출석');
 INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-02', '2417', '10', 'aaa', '출석');
 
-INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-03', '2202', '8', 'aaa', '출석');
-INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-03', '2202', '9', 'aaa', '출석');
-INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-03', '2202', '10', 'aaa', '출석');
+INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-02', '2415', '8', 'aaa', '출석');
+INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-02', '2415', '9', 'aaa', '출석');
+INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-02', '2415', '10', 'aaa', '출석');
 
 select * from teacher;
