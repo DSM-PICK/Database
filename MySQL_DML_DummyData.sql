@@ -1,6 +1,6 @@
 use testdb_saturn;
 
-DELETE FROM attendence;
+DELETE FROM attendance;
 DELETE FROM activity;
 DELETE FROM student;
 DELETE FROM class;
@@ -56,12 +56,12 @@ INSERT INTO activity(date, schedule, second_floor_teacher_id, third_floor_teache
 INSERT INTO activity(date, schedule, second_floor_teacher_id, third_floor_teacher_id, forth_floor_teacher_id) VALUES('2020-10-05', '방과후', 'ddd', 'eee', 'fff');
 INSERT INTO activity(date, schedule, second_floor_teacher_id, third_floor_teacher_id, forth_floor_teacher_id) VALUES('2020-10-06', '방과후', 'eee', 'fff', 'aaa');
 
-INSERT INTO attendence(date, student_num, period, teacher_id, state) VALUES('2020-10-02', '2201', '8', 'aaa', '출석');
-INSERT INTO attendence(date, student_num, period, teacher_id, state) VALUES('2020-10-02', '2201', '9', 'aaa', '출석');
-INSERT INTO attendence(date, student_num, period, teacher_id, state) VALUES('2020-10-02', '2201', '10', 'aaa', '출석');
+INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-02', '2417', '8', 'aaa', '출석');
+INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-02', '2417', '9', 'aaa', '출석');
+INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-02', '2417', '10', 'aaa', '출석');
 
-INSERT INTO attendence(date, student_num, period, teacher_id, state) VALUES('2020-10-03', '2202', '8', 'aaa', '출석');
-INSERT INTO attendence(date, student_num, period, teacher_id, state) VALUES('2020-10-03', '2202', '9', 'aaa', '출석');
-INSERT INTO attendence(date, student_num, period, teacher_id, state) VALUES('2020-10-03', '2202', '10', 'aaa', '출석');
+INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-03', '2202', '8', 'aaa', '출석');
+INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-03', '2202', '9', 'aaa', '출석');
+INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-03', '2202', '10', 'aaa', '출석');
 
 select * from teacher;

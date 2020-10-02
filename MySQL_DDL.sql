@@ -14,6 +14,7 @@ DROP TABLE IF EXISTS activity;
 DROP TABLE IF EXISTS changed_teacher;
 DROP TABLE IF EXISTS prior_absence;
 DROP TABLE IF EXISTS admin;
+DROP TABLE IF EXISTS attendance;
 
 
 CREATE TABLE IF NOT EXISTS club_location (
@@ -84,7 +85,7 @@ CREATE TABLE IF NOT EXISTS activity (
 );
 
 -- 출석 테이블 ( 메인 기능 , activity + teacher + student )
-CREATE TABLE IF NOT EXISTS attendence (
+CREATE TABLE IF NOT EXISTS attendance (
 	id				INT(11)			NOT NULL		AUTO_INCREMENT,
     date 			DATE 			NOT NULL,
     student_num 	CHAR(4) 		NOT NULL,
