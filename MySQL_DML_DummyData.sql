@@ -22,12 +22,12 @@ INSERT INTO club_location(location, floor, priority) VALUES('2학년 4반', 3, 3
 INSERT INTO club_location(location, floor, priority) VALUES('정보보안 2실', 3, 4);
 INSERT INTO club_location(location, floor, priority) VALUES('정보보안 1실', 3, 5);
 
-INSERT INTO club(name, location, teacher) VALUES('DMS', '2학년 1반', 'aaa');		-- 김정은쌤
-INSERT INTO club(name, location, teacher) VALUES('시나브로', '2학년 2반', 'bbb');	-- 안소희쌤
-INSERT INTO club(name, location, teacher) VALUES('GRAM', '2학년 3반', 'ccc');		-- 조규석쌤
-INSERT INTO club(name, location, teacher) VALUES('EntryDSM', '2학년 4반', 'ddd');	-- 안희명쌤
-INSERT INTO club(name, location, teacher) VALUES('UP', '정보보안 2실', 'eee');		-- 서현철쌤
-INSERT INTO club(name, location, teacher) VALUES('INFO', '정보보안 1실', 'fff');	-- 엄영석쌤
+INSERT INTO club(name, location, teacher, club_head) VALUES('DMS', '2학년 1반', 'aaa', '공영길');		-- 김정은쌤
+INSERT INTO club(name, location, teacher, club_head) VALUES('시나브로', '2학년 2반', 'bbb', '누구노');	-- 안소희쌤
+INSERT INTO club(name, location, teacher, club_head) VALUES('GRAM', '2학년 3반', 'ccc', '김민석');		-- 조규석쌤
+INSERT INTO club(name, location, teacher, club_head) VALUES('EntryDSM', '2학년 4반', 'ddd', '정우영');	-- 안희명쌤
+INSERT INTO club(name, location, teacher, club_head) VALUES('UP', '정보보안 2실', 'eee', '손정우');		-- 서현철쌤
+INSERT INTO club(name, location, teacher, club_head) VALUES('INFO', '정보보안 1실', 'fff', '누구노');	-- 엄영석쌤
 
 INSERT INTO class(name, floor, priority) VALUES('1학년 1반', 4, 0);
 INSERT INTO class(name, floor, priority) VALUES('1학년 2반', 4, 1);
