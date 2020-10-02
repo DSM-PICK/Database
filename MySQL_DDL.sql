@@ -95,6 +95,7 @@ CREATE TABLE IF NOT EXISTS attendence (
     
     FOREIGN KEY (date) 			REFERENCES activity(date) 	ON UPDATE CASCADE,
     FOREIGN KEY (student_num) 	REFERENCES student(num) 	ON UPDATE CASCADE,
+    FOREIGN KEY (teacher_id)	REFERENCES teacher(id)		ON UPDATE CASCADE,
     
     PRIMARY KEY (id)
 );
