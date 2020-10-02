@@ -64,7 +64,6 @@ CREATE TABLE IF NOT EXISTS teacher (
 	id 		VARCHAR(16) 	NOT NULL,
     pw 		CHAR(128) 	NOT NULL,
     name 	VARCHAR(12) 	NOT NULL,
-    token	VARCHAR(200),
     
     PRIMARY KEY (id)
 );
