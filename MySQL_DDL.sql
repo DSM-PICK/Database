@@ -112,7 +112,7 @@ CREATE TABLE IF NOT EXISTS changed_teacher (
 );
 
 -- 사전 결석 테이블 ( activity{2} + student + teacher)
-CREATE TABLE IF NOT EXISTS prior_absence (
+CREATE TABLE IF NOT EXISTS pre_absence (
 	id 				INT(11) 	NOT NULL AUTO_INCREMENT,
     teacher_id		VARCHAR(16) NOT NULL,
 	start_date 		DATE 		NOT NULL,
