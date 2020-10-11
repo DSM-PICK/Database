@@ -51,22 +51,22 @@ INSERT INTO student(num, name, club_name, class_name) VALUES('2415', '유시온'
 INSERT INTO student(num, name, club_name, class_name) VALUES('2417', '이진혁', 'UP', '2학년 4반');
 INSERT INTO student(num, name, club_name, class_name) VALUES('2418', '정우영', 'EntryDSM', '2학년 4반');
 
-INSERT INTO activity(date, schedule, second_floor_teacher_id, third_floor_teacher_id, forth_floor_teacher_id) VALUES('2020-10-10', '동아리', 'aaa', 'bbb', 'ccc');
-INSERT INTO activity(date, schedule, second_floor_teacher_id, third_floor_teacher_id, forth_floor_teacher_id) VALUES('2020-10-11', '주말', 'bbb', 'ccc', 'ddd');
-INSERT INTO activity(date, schedule, second_floor_teacher_id, third_floor_teacher_id, forth_floor_teacher_id) VALUES('2020-10-12', '주말', 'ccc', 'ddd', 'eee');
-INSERT INTO activity(date, schedule, second_floor_teacher_id, third_floor_teacher_id, forth_floor_teacher_id) VALUES('2020-10-13', '방과후', 'ddd', 'eee', 'fff');
-INSERT INTO activity(date, schedule, second_floor_teacher_id, third_floor_teacher_id, forth_floor_teacher_id) VALUES('2020-10-14', '방과후', 'eee', 'fff', 'aaa');
+INSERT INTO activity(date, schedule, second_floor_teacher_id, third_floor_teacher_id, forth_floor_teacher_id) VALUES('2020-10-11', 'club', 'aaa', 'bbb', 'ccc');
+INSERT INTO activity(date, schedule, second_floor_teacher_id, third_floor_teacher_id, forth_floor_teacher_id) VALUES('2020-10-12', 'club', 'bbb', 'ccc', 'ddd');
+INSERT INTO activity(date, schedule, second_floor_teacher_id, third_floor_teacher_id, forth_floor_teacher_id) VALUES('2020-10-13', 'club', 'ccc', 'ddd', 'eee');
+INSERT INTO activity(date, schedule, second_floor_teacher_id, third_floor_teacher_id, forth_floor_teacher_id) VALUES('2020-10-14', 'club', 'ddd', 'eee', 'fff');
+INSERT INTO activity(date, schedule, second_floor_teacher_id, third_floor_teacher_id, forth_floor_teacher_id) VALUES('2020-10-15', 'club', 'eee', 'fff', 'aaa');
 
-INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-10', '2417', '8', 'aaa', '출석');
-INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-10', '2417', '9', 'aaa', '출석');
-INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-10', '2417', '10', 'aaa', '출석');
+-- INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-11', '2417', '8', 'aaa', '출석');
+-- INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-11', '2417', '9', 'aaa', '출석');
+-- INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-11', '2417', '10', 'aaa', '출석');
 
-INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-10', '2415', '8', 'aaa', '출석');
-INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-10', '2415', '9', 'aaa', '출석');
-INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-10', '2415', '10', 'aaa', '출석');
+-- INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-11', '2415', '8', 'aaa', '출석');
+-- INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-11', '2415', '9', 'aaa', '출석');
+-- INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-11', '2415', '10', 'aaa', '출석');
 
-INSERT INTO pre_absence(teacher_id, start_date, end_date, student_num, start_period, end_period) values('aaa', '2020-10-10', '2020-10-20', '2417', 1, 10);
-INSERT INTO pre_absence(teacher_id, start_date, end_date, student_num, start_period, end_period) values('aaa', '2020-10-11', '2020-10-11', '2415', 7, 7);
-INSERT INTO pre_absence(teacher_id, start_date, end_date, student_num, start_period, end_period) values('aaa', '2020-10-11', '2020-10-12', '2411', 1, 10);
+INSERT INTO pre_absence(teacher_id, start_date, end_date, student_num, start_period, end_period, state) values('aaa', '2020-10-10', '2020-10-20', '2417', 1, 10, '현체');
+INSERT INTO pre_absence(teacher_id, start_date, end_date, student_num, start_period, end_period, state) values('aaa', '2020-10-11', '2020-10-11', '2415', 7, 7, '공결');
+INSERT INTO pre_absence(teacher_id, start_date, end_date, student_num, start_period, end_period, state) values('aaa', '2020-10-11', '2020-10-12', '2411', 1, 10, '외출');
 
 select * from teacher;
