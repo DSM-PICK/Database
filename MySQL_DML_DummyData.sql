@@ -7,6 +7,7 @@ DELETE FROM class;
 DELETE FROM club;
 DELETE FROM club_location;
 DELETE FROM teacher;
+DELETE FROM pre_absence;
 
 INSERT INTO teacher(id, pw, name) VALUES('aaa', 'd6f644b19812e97b5d871658d6d3400ecd4787faeb9b8990c1e7608288664be77257104a58d033bcf1a0e0945ff06468ebe53e2dff36e248424c7273117dac09', '김정은');
 INSERT INTO teacher(id, pw, name) VALUES('bbb', '5edc1c6a4390075a3ca27f4d4161c46b374b1c3b2d63f846db6fff0c513203c3ac3b14a24a6f09d8bf21407a4842113b5d9aa359d266299c3d6cf9e92db66dbe', '안소희');
@@ -63,5 +64,9 @@ INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('202
 INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-10', '2415', '8', 'aaa', '출석');
 INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-10', '2415', '9', 'aaa', '출석');
 INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-10', '2415', '10', 'aaa', '출석');
+
+INSERT INTO pre_absence(teacher_id, start_date, end_date, student_num, start_period, end_period) values('aaa', '2020-10-10', '2020-10-20', '2417', 1, 10);
+INSERT INTO pre_absence(teacher_id, start_date, end_date, student_num, start_period, end_period) values('aaa', '2020-10-11', '2020-10-11', '2415', 7, 7);
+INSERT INTO pre_absence(teacher_id, start_date, end_date, student_num, start_period, end_period) values('aaa', '2020-10-11', '2020-10-12', '2411', 1, 10);
 
 select * from teacher;
