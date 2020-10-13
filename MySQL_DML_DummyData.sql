@@ -51,11 +51,11 @@ INSERT INTO student(num, name, club_name, class_name) VALUES('2415', '유시온'
 INSERT INTO student(num, name, club_name, class_name) VALUES('2417', '이진혁', 'UP', '2학년 4반');
 INSERT INTO student(num, name, club_name, class_name) VALUES('2418', '정우영', 'EntryDSM', '2학년 4반');
 
-INSERT INTO activity(date, schedule, second_floor_teacher_id, third_floor_teacher_id, forth_floor_teacher_id) VALUES('2020-10-11', 'club', 'aaa@gamil.com', 'bbb@gamil.com', 'ccc@gamil.com');
-INSERT INTO activity(date, schedule, second_floor_teacher_id, third_floor_teacher_id, forth_floor_teacher_id) VALUES('2020-10-12', 'club', 'bbb@gamil.com', 'ccc@gamil.com', 'ddd@gamil.com');
-INSERT INTO activity(date, schedule, second_floor_teacher_id, third_floor_teacher_id, forth_floor_teacher_id) VALUES('2020-10-13', 'club', 'ccc@gamil.com', 'ddd@gamil.com', 'eee@gamil.com');
-INSERT INTO activity(date, schedule, second_floor_teacher_id, third_floor_teacher_id, forth_floor_teacher_id) VALUES('2020-10-14', 'club', 'ddd@gamil.com', 'eee@gamil.com', 'fff@gamil.com');
-INSERT INTO activity(date, schedule, second_floor_teacher_id, third_floor_teacher_id, forth_floor_teacher_id) VALUES('2020-10-15', 'club', 'eee@gamil.com', 'fff@gamil.com', 'aaa@gamil.com');
+INSERT INTO activity(date, schedule, second_floor_teacher_id, third_floor_teacher_id, forth_floor_teacher_id) VALUES('2020-10-11', 'club', 'aaa@gmail.com', 'bbb@gmail.com', 'ccc@gmail.com');
+INSERT INTO activity(date, schedule, second_floor_teacher_id, third_floor_teacher_id, forth_floor_teacher_id) VALUES('2020-10-12', 'club', 'bbb@gmail.com', 'ccc@gmail.com', 'ddd@gmail.com');
+INSERT INTO activity(date, schedule, second_floor_teacher_id, third_floor_teacher_id, forth_floor_teacher_id) VALUES('2020-10-13', 'club', 'ccc@gmail.com', 'ddd@gmail.com', 'eee@gmail.com');
+INSERT INTO activity(date, schedule, second_floor_teacher_id, third_floor_teacher_id, forth_floor_teacher_id) VALUES('2020-10-14', 'club', 'ddd@gmail.com', 'eee@gmail.com', 'fff@gmail.com');
+INSERT INTO activity(date, schedule, second_floor_teacher_id, third_floor_teacher_id, forth_floor_teacher_id) VALUES('2020-10-15', 'club', 'eee@gmail.com', 'fff@gmail.com', 'aaa@gmail.com');
 
 -- INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-11', '2417', '8', 'aaa', '출석');
 -- INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-11', '2417', '9', 'aaa', '출석');
@@ -65,6 +65,8 @@ INSERT INTO activity(date, schedule, second_floor_teacher_id, third_floor_teache
 -- INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-11', '2415', '9', 'aaa', '출석');
 -- INSERT INTO attendance(date, student_num, period, teacher_id, state) VALUES('2020-10-11', '2415', '10', 'aaa', '출석');
 
-INSERT INTO pre_absence(teacher_id, start_date, end_date, student_num, start_period, end_period, state) values('aaa@gamil.com', '2020-10-10', '2020-10-20', '2417', 1, 10, '현체');
-INSERT INTO pre_absence(teacher_id, start_date, end_date, student_num, start_period, end_period, state) values('aaa@gamil.com', '2020-10-12', '2020-10-12', '2415', 7, 7, '공결');
-INSERT INTO pre_absence(teacher_id, start_date, end_date, student_num, start_period, end_period, state) values('aaa@gamil.com', '2020-10-12', '2020-10-13', '2411', 1, 10, '외출');
+INSERT INTO pre_absence(teacher_id, start_date, end_date, student_num, start_period, end_period, state) values('aaa@gmail.com', '2020-10-10', '2020-10-20', '2417', 1, 10, '현체');
+INSERT INTO pre_absence(teacher_id, start_date, end_date, student_num, start_period, end_period, state) values('aaa@gmail.com', '2020-10-12', '2020-10-12', '2415', 7, 7, '공결');
+INSERT INTO pre_absence(teacher_id, start_date, end_date, student_num, start_period, end_period, state) values('aaa@gmail.com', '2020-10-12', '2020-10-13', '2411', 1, 10, '외출');
+
+select * from teacher;
