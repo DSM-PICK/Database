@@ -1,13 +1,15 @@
 use testdb_saturn;
 
-DELETE FROM attendance;
-DELETE FROM pre_absence;
-DELETE FROM activity;
-DELETE FROM student;
-DELETE FROM class;
-DELETE FROM club;
-DELETE FROM club_location;
-DELETE FROM teacher;
+SET FOREIGN_KEY_CHECKS = 0; 
+truncate attendance;
+truncate pre_absence;
+truncate activity;
+truncate student;
+truncate class;
+truncate club;
+truncate club_location;
+truncate teacher;
+SET FOREIGN_KEY_CHECKS = 1; 
 
 INSERT INTO teacher(id, pw, name) VALUES('aaa@gmail.com', 'd6f644b19812e97b5d871658d6d3400ecd4787faeb9b8990c1e7608288664be77257104a58d033bcf1a0e0945ff06468ebe53e2dff36e248424c7273117dac09', '김정은');
 INSERT INTO teacher(id, pw, name) VALUES('bbb@gmail.com', '5edc1c6a4390075a3ca27f4d4161c46b374b1c3b2d63f846db6fff0c513203c3ac3b14a24a6f09d8bf21407a4842113b5d9aa359d266299c3d6cf9e92db66dbe', '안소희');
