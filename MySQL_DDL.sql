@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS teacher (
 	id 		VARCHAR(16) 	NOT NULL,
     pw 		CHAR(128) 	NOT NULL,
     name 	VARCHAR(12) 	NOT NULL,
-    office	VARCHAR(12)		NOT NULL,
+    office	VARCHAR(40)		NOT NULL,
     
     PRIMARY KEY (id)
 );
