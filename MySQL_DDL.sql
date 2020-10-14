@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS pick;
+DROP DATABASE IF EXISTS testdb_saturn;
 
-CREATE DATABASE IF NOT EXISTS pick;
+CREATE DATABASE IF NOT EXISTS testdb_saturn;
 
-USE pick;
+USE testdb_saturn;
 
 -- DROP SQL
 DROP TABLE IF EXISTS club;
@@ -17,6 +17,17 @@ DROP TABLE IF EXISTS admin;
 DROP TABLE IF EXISTS attendance;
 
 
+
+-- 선생님(감독자) 테이블
+CREATE TABLE IF NOT EXISTS teacher (
+	id 		VARCHAR(16) 	NOT NULL,
+    pw 		CHAR(128) 	NOT NULL,
+    name 	VARCHAR(12) 	NOT NULL,
+    office	VARCHAR(40)		NOT NULL,
+    
+    PRIMARY KEY (id)
+);
+
 CREATE TABLE IF NOT EXISTS club_location (
 	location VARCHAR(20) NOT NULL,
     floor INT NOT NULL,
@@ -30,11 +41,12 @@ CREATE TABLE IF NOT EXISTS club_location (
 CREATE TABLE IF NOT EXISTS club (
     name 		VARCHAR(20) 	NOT NULL,
     location 	VARCHAR(20) 	NOT NULL	UNIQUE,
-    teacher 	VARCHAR(10) 	NULL,
-    club_head 	VARCHAR(12) 	NOT NULL,
+    teacher 	VARCHAR(10),
+    club_head 	VARCHAR(12),
 
     PRIMARY KEY (name),
-    FOREIGN KEY(location) REFERENCES club_location(location) ON UPDATE CASCADE ON DELETE NO ACTION
+    FOREIGN KEY(location) REFERENCES club_location(location) ON UPDATE CASCADE ON DELETE NO ACTION,
+    FOREIGN KEY(teacher) REFERENCES teacher(id) ON UPDATE CASCADE
 );
 
 -- 교실 테이블
@@ -50,23 +62,13 @@ CREATE TABLE IF NOT EXISTS class (
 CREATE TABLE IF NOT EXISTS student (
     num 		CHAR(4) 		NOT NULL,
     name 		VARCHAR(12) 	NOT NULL,
-    club_name 	VARCHAR(20) 	NULL,
+    club_name 	VARCHAR(20),
     class_name 	VARCHAR(20) 	NOT NULL,
     
     FOREIGN KEY (club_name) 	REFERENCES club(name) 	ON UPDATE CASCADE ON DELETE SET NULL,
     FOREIGN KEY (class_name) 	REFERENCES class(name) 	ON UPDATE CASCADE,
     
     PRIMARY KEY (num)
-);
-
--- 선생님(감독자) 테이블
-CREATE TABLE IF NOT EXISTS teacher (
-	id 		VARCHAR(16) 	NOT NULL,
-    pw 		CHAR(128) 	NOT NULL,
-    name 	VARCHAR(12) 	NOT NULL,
-    office	VARCHAR(40)		NOT NULL,
-    
-    PRIMARY KEY (id)
 );
 
 -- 날짜 테이블 ( 특정 날짜에 어떤 선생님이 무슨 일을 하는지 )
