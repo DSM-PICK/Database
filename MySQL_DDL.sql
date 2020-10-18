@@ -45,8 +45,7 @@ CREATE TABLE IF NOT EXISTS club (
     club_head 	VARCHAR(12),
 
     PRIMARY KEY (name),
-    FOREIGN KEY(location) REFERENCES club_location(location) ON UPDATE CASCADE ON DELETE NO ACTION,
-    FOREIGN KEY(teacher) REFERENCES teacher(id) ON UPDATE CASCADE
+    FOREIGN KEY(location) REFERENCES club_location(location) ON UPDATE CASCADE ON DELETE NO ACTION
 );
 
 -- 교실 테이블
@@ -137,4 +136,16 @@ CREATE TABLE IF NOT EXISTS admin (
     pw VARCHAR(80) NOT NULL,
     
     PRIMARY KEY (id)
-)
+);
+
+-- 공지사항 테이블
+CREATE TABLE IF NOT EXISTS notice (
+	notice_id INT AUTO_INCREMENT,
+    content VARCHAR(100) NOT NULL,
+    admin_id VARCHAR(16) NOT NULL,
+    category VARCHAR(20) NOT NULL,
+    created_at DATETIME NOT NULL,
+    
+    PRIMARY KEY (notice_id),
+    FOREIGN KEY (admin_id) REFERENCES admin(id) ON UPDATE CASCADE ON DELETE NO ACTION
+);
