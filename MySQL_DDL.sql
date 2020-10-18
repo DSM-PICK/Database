@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS testdb_saturn;
+DROP DATABASE IF EXISTS pick;
 
-CREATE DATABASE IF NOT EXISTS testdb_saturn;
+CREATE DATABASE IF NOT EXISTS pick;
 
-USE testdb_saturn;
+USE pick;
 
 -- DROP SQL
 DROP TABLE IF EXISTS club;
@@ -15,6 +15,7 @@ DROP TABLE IF EXISTS changed_teacher;
 DROP TABLE IF EXISTS prior_absence;
 DROP TABLE IF EXISTS admin;
 DROP TABLE IF EXISTS attendance;
+DROP TABLE IF EXISTS notice;
 
 
 
