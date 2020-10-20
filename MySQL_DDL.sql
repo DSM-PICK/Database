@@ -102,6 +102,7 @@ CREATE TABLE IF NOT EXISTS attendance (
     
     PRIMARY KEY (id)
 );
+ALTER TABLE attendance ADD UNIQUE (date, student_num, period);
 
 -- 변경된 선생님 목록 테이블 ( 임시 테이블 )
 CREATE TABLE IF NOT EXISTS changed_teacher (
