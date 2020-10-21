@@ -144,7 +144,7 @@ CREATE TABLE IF NOT EXISTS notice (
     content VARCHAR(100) NOT NULL,
     admin_id VARCHAR(16) NOT NULL,
     category VARCHAR(20) NOT NULL,
-    created_at DATETIME NOT NULL,
+    created_at DATETIME		DEFAULT CURRENT_TIMESTAMP,
     
     PRIMARY KEY (notice_id),
     FOREIGN KEY (admin_id) REFERENCES admin(id) ON UPDATE CASCADE ON DELETE NO ACTION
