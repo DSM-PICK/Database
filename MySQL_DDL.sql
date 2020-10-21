@@ -17,8 +17,6 @@ DROP TABLE IF EXISTS admin;
 DROP TABLE IF EXISTS attendance;
 DROP TABLE IF EXISTS notice;
 
-
-
 -- 선생님(감독자) 테이블
 CREATE TABLE IF NOT EXISTS teacher (
 	id 		VARCHAR(16) 	NOT NULL,
@@ -93,7 +91,7 @@ CREATE TABLE IF NOT EXISTS attendance (
     student_num 	CHAR(4) 		NOT NULL,
     period 			INT(11) 		NOT NULL,
     
-	teacher_id 		VARCHAR(16) 	NOT NULL,
+	teacher_id 		VARCHAR(16),
     state 			CHAR(4) 		NOT NULL,
     
     FOREIGN KEY (date) 			REFERENCES activity(date) 	ON UPDATE CASCADE,
