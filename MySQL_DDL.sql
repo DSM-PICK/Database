@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS class (
 CREATE TABLE IF NOT EXISTS student (
     num 		CHAR(4) 		NOT NULL,
     name 		VARCHAR(12) 	NOT NULL,
-    club_name 	VARCHAR(20)		NOT NULL	DEFAULT '자습 동아리',
+    club_name 	VARCHAR(20)		NOT NULL	DEFAULT '자습',
     class_name 	VARCHAR(20) 	NOT NULL,
     
     FOREIGN KEY (club_name) 	REFERENCES club(name) 	ON UPDATE CASCADE ON DELETE SET DEFAULT,
