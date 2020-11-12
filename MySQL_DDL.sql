@@ -125,6 +125,8 @@ CREATE TABLE IF NOT EXISTS pre_absence (
     start_period 	INT(11) 	NOT NULL,
     end_period 		INT(11) 	NOT NULL,
     state			CHAR(4)		NOT NULL,
+    sub_state		CHAR(4),
+    remarks			VARCHAR(400),
     arrival_time	TIME,
     
     FOREIGN KEY (student_num) 	REFERENCES student(num) 	ON UPDATE CASCADE,
