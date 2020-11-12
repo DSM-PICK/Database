@@ -62,8 +62,8 @@ CREATE TABLE IF NOT EXISTS student (
     name 		VARCHAR(12) 	NOT NULL,
     club_name 	VARCHAR(20)		NOT NULL	DEFAULT '자습',
     class_name 	VARCHAR(20) 	NOT NULL,
-    is_monday_self_study TINYINT(1) NOT NULL DEFAULT 0,
-    is_tuesday_self_study TINYINT(1) NOT NULL DEFAULT 0,
+    is_monday_self_study BOOLEAN NOT NULL DEFAULT 0,
+    is_tuesday_self_study BOOLEAN NOT NULL DEFAULT 0,
     
     FOREIGN KEY (club_name) 	REFERENCES club(name) 	ON UPDATE CASCADE ON DELETE SET DEFAULT,
     FOREIGN KEY (class_name) 	REFERENCES class(name) 	ON UPDATE CASCADE ON DELETE NO ACTION,
