@@ -126,9 +126,19 @@ CREATE TABLE IF NOT EXISTS pre_absence (
     end_period 		INT(11) 	NOT NULL,
     state			CHAR(4)		NOT NULL,
     arrival_time	TIME,
-    checked			BOOLEAN		NOT NULL DEFAULT 0,
     
     FOREIGN KEY (student_num) 	REFERENCES student(num) 	ON UPDATE CASCADE,
+    FOREIGN KEY (teacher_id)	REFERENCES teacher(id)		ON UPDATE CASCADE,
+    
+    PRIMARY KEY (id)
+);
+
+-- 확인된 사전 결석 테이블 (activity + teacher) <- 확인은 외출등으로 나간 학생이 돌아왔음을 선생님이 확인한것
+CREATE TABLE IF NOT EXISTS checked_pre_absence (
+	id			INT(11) NOT NULL,
+    teacher_id	VARCHAR(16) NOT NULL,
+    
+    FOREIGN KEY (id) REFERENCES pre_absence(id)		ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY (teacher_id)	REFERENCES teacher(id)		ON UPDATE CASCADE,
     
     PRIMARY KEY (id)
