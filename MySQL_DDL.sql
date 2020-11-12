@@ -126,7 +126,7 @@ CREATE TABLE IF NOT EXISTS pre_absence (
     end_period 		INT(11) 	NOT NULL,
     state			CHAR(4)		NOT NULL,
     arrival_time	TIME,
-    checked			BOOLEAN		NOT NULL,
+    checked			BOOLEAN		NOT NULL DEFAULT 0,
     
     FOREIGN KEY (student_num) 	REFERENCES student(num) 	ON UPDATE CASCADE,
     FOREIGN KEY (teacher_id)	REFERENCES teacher(id)		ON UPDATE CASCADE,
