@@ -52,6 +52,7 @@ CREATE TABLE IF NOT EXISTS class (
 	name 		VARCHAR(20) 	NOT NULL,
     floor 		INT(1) 			NOT NULL,
     priority	INT 			NOT NULL,
+    manager     VARCHAR(12),
 
     PRIMARY KEY (name)
 );
@@ -75,7 +76,7 @@ CREATE TABLE IF NOT EXISTS student (
 CREATE TABLE IF NOT EXISTS activity (
 	date 					DATE 			NOT NULL,
     schedule 				VARCHAR(28) 	NOT NULL,
-    second_floor_teacher_id 	VARCHAR(16) 	NULL,
+    second_floor_teacher_id VARCHAR(16) 	NULL,
     third_floor_teacher_id 	VARCHAR(16) 	NULL,
     forth_floor_teacher_id 	VARCHAR(16) 	NULL,
     
@@ -94,6 +95,7 @@ CREATE TABLE IF NOT EXISTS attendance (
     period 			INT(11) 		NOT NULL,
     
 	teacher_id 		VARCHAR(16),
+    memo            VARCHAR(80),
     state 			CHAR(4) 		NOT NULL,
     
     FOREIGN KEY (date) 			REFERENCES activity(date) 	ON UPDATE CASCADE,
